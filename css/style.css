@@ -295,5 +295,10 @@ header{
     .nav_header{
         display: none;
     }
+    header{
+        padding: 0 2rem;
+    }
+
+   
   
 }
