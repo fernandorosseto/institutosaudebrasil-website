@@ -30,6 +30,7 @@
 body{
     background: #F8F8FF;
     height: 500vh;
+    
 }
   
 header{
@@ -43,8 +44,11 @@ header{
     top: 0;
     height: 15vh;
     padding: 0 5rem;
+    z-index: 1;
+    border-radius: 0px 0px 145px 145px;
+    -moz-border-radius: 0px 0px 50px 50px;
+    -webkit-border-radius: 0px 0px 50px 50px;
     
-   
     
 }
 
@@ -187,11 +191,109 @@ header{
     
 }
 
-.nav_header>a:nth-child(3):hover {
-    transform: scale(2);
+.doar:hover{
+    transform: scale(1.5);
+    /*Não está funcionando*/
+}
+
+#page1{
+    display: relative;
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 90vw;
+    overflow: hidden;
+    top: 10%;
     
 }
 
-.page{
-    height: 100vh;
+#slides{
+    width: auto;
+    max-height: 60%;
+    display: flex;
+    margin-top: 5%;
+    
+}
+
+#slides input{
+    display: none;
+}
+
+.slide{
+    width: 100%;
+    position: relative;
+    margin: 0 10vw;
+    
+}
+
+.foto{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 70vw;
+    height: 100%; 
+  
+}
+
+.navegacao-manual{
+    position: absolute;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    background-color: #F8F8FF;
+    border: 1px solid #041562;
+
+    
+}
+
+.manual-btn{
+    border: 1px solid #041562;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 8px;
+    transition: .5s;
+    
+}
+
+.manual-btn:hover{
+    background-color: #041562;
+}
+
+#radio1:checked ~ .item1{
+    margin: 0;
+}
+
+#radio2:checked ~ .item1{
+    margin-left: -20%;
+}
+
+
+/*Telas menores*/
+
+@media screen and (max-width: 900px) {
+
+    .logo-img {
+        height: 100px;
+        width: 100px;
+        top: -8px;
+    
+    }
+
+    .nav_header{
+        width: 50%;
+        font-size: .8rem;
+    }
+  
+}
+
+/*Celular*/
+@media screen and (max-width: 700px) {
+
+    .nav_header{
+        display: none;
+    }
+  
 }
