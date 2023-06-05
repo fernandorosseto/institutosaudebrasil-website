@@ -207,6 +207,9 @@ header{
     height: 70vh;
     display: flex;
     overflow: hidden;
+    touch-action: pan-x; 
+    -webkit-overflow-scrolling: touch; 
+    scroll-behavior: smooth; 
 
 }
 
@@ -271,6 +274,21 @@ header{
     }
     header{
         padding: 0 2rem;
+    }
+
+    .slides> * {
+        pointer-events: none; /* Impede a interferência dos eventos nos elementos internos */
+    }
+
+    .slide>h2{
+       
+        font-size: 4rem;
+       
+    }
+
+    .slide>p{
+        font-size: 2rem;
+        
     }
 
    
