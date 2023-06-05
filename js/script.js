@@ -17,4 +17,21 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Atualiza a classe "selected" quando houver alterações no hash da URL.
     window.addEventListener("hashchange", updateSelectedLink);
-  });
+});
+
+//Primeira página, rolagem dos slides
+const btnEsquerdo = document.getElementById("btn-esquerdo")
+const btnDireito = document.getElementById("btn-direito")
+
+btnEsquerdo.addEventListener('click', function(){
+  scrollSlides(-2000)
+}) 
+
+btnDireito.addEventListener('click', function(){
+  scrollSlides(2000)
+})
+
+function scrollSlides(valorScroll) {
+  const div = document.getElementById('slides');
+  div.scrollLeft += valorScroll;
+}
