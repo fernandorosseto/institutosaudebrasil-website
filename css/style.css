@@ -67,19 +67,25 @@ header{
     display: flex;
     gap: 1rem 2rem;
     padding: .5rem ;
-}
-
-#btnHamburger{
-    display: none;
     
 }
 
+
 #hamburger{
-    height: 4vh;
-    width: auto;
-    float: right;
-    margin: 1rem;
-    right: 0;
+    background-image: url('img/hamburger.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    margin-right: 1rem;
+    
+}
+
+#hamburger.x {
+    /* Estilos para o ícone "X" */
+    background-image: url('img/x.png');
 }
 
 /* Estilos para telas maiores */
@@ -94,11 +100,6 @@ header{
     .logo {
         max-height: 10vh; 
     }
-
-    #btnHamburger{
-        display: block;
-    }
-
     
     #menu{
         display: block;
@@ -107,13 +108,18 @@ header{
         top: 10vh;
         right: 0px;
         background-color: var(--cor-bacground-dois);
-        height: 90vh;
+        height: 0;
         z-index: 1000;
+        transition: ease-in .8s;
+        visibility: hidden;
+        overflow-y: hidden;
          
     }
 
     #nav.active #menu{
         display: block;
+        height: 90vh;
+        visibility: visible;
         
     }
 
