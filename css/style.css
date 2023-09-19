@@ -11,7 +11,7 @@
     --cor-secundaria: #008000;
     --cor-principal: #0d4276; 
     --cor-background-um: #FFFFFF; 
-    --cor-bacground-dois: #FFFFFF; 
+    --cor-bacground-dois: rgb(238, 238, 238); 
     --cor-texto: #000000; 
 }
 
@@ -41,11 +41,12 @@ button {
 /*  */
 
 
-/* Apenas para teste */
+/* Apenas para teste 
 section{
     height: 100vh;
     top: 10vh;
 }
+-------------------*/
  
 header{
     display: flex;
@@ -54,7 +55,7 @@ header{
     justify-content: space-between;
     align-items: center;
     top: 0px;
-    background-color: rgb(241, 241, 241, .3);
+    background-color: var(--cor-bacground-dois);
 }
 
 .logo{
@@ -70,22 +71,17 @@ header{
     
 }
 
-
-#hamburger{
-    background-image: url('img/hamburger.png');
-    background-size: 30px;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    margin-right: 1rem;
+.imagemInicio>img{
+    width: 75vw;
+    align-self: center;
     
 }
 
-#hamburger.x {
-    /* Estilos para o ícone "X" */
-    background-image: url('img/x.png');
+.textoInicio>h1{
+    color: var(--cor-texto);
+    width: 75vw;
+    transform: translateY(-12rem);
+    font-size: 5rem;
 }
 
 /* Estilos para telas maiores */
@@ -94,11 +90,28 @@ header{
 
     header {
         height: 10vh;
+        z-index: 1;
         
     }
     
     .logo {
         max-height: 10vh; 
+    }
+
+    #hamburger{
+        background-image: url('img/hamburger.png');
+        background-size: 30px;
+        background-repeat: no-repeat;
+        width: 30px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        margin-right: 1rem;
+        
+    }
+    
+    #hamburger.x {
+        background-image: url('img/x.png');
     }
     
     #menu{
@@ -110,7 +123,7 @@ header{
         background-color: var(--cor-bacground-dois);
         height: 0;
         z-index: 1000;
-        transition: ease-in .8s;
+        transition: ease-in .3s;
         visibility: hidden;
         overflow-y: hidden;
          
@@ -130,7 +143,48 @@ header{
     }
 
     section{
-        padding-top: 16vh;
         height: 100vh;
+        
     }
+
+    .imagemInicio>img{
+        width: 100vw;
+    }
+
+    /*.textoInicio:before {
+        display: block;
+        content: "";
+        position: absolute;
+        height: 20px;
+        background-color: var(--cor-secundaria);
+        right:20px;
+        width: 42%;
+        transform: translateY(-80px);
+    }*/
+
+    .textoInicio{
+        display: block;
+        position: absolute;
+        bottom: 170px;
+
+        
+    }
+
+    .textoInicio>h1{
+        color: var(--cor-background-um);
+        font-size: 2.85rem;
+        width: 100vw;
+        text-align: right;
+        padding-right: 20px;
+        z-index: 0;
+        -webkit-text-stroke: .65px var(--cor-principal);
+        text-shadow:  .65px var(--cor-principal);
+        backdrop-filter: blur(3px);
+
+        
+    }
+
+    
+
+    
 }

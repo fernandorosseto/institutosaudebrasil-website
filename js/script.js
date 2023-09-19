@@ -1,18 +1,10 @@
 const btnHamburger = document.getElementById("hamburger");
-const hamburger = document.getElementById('hamburger');
+const hamburgerIcon = document.getElementById("hamburger");
 
 function abrirNav() {
 	const nav = document.getElementById("nav");
 	nav.classList.toggle("active");
+	hamburgerIcon.classList.toggle("x");
 }
 
-function trocarIcone() {
-	hamburger.classList.toggle('x');
-}
-
-function executarAmbasFuncoes() {
-    abrirNav();
-    trocarIcone();
-}
-
-btnHamburger.addEventListener("click", executarAmbasFuncoes);
+btnHamburger.addEventListener("click", abrirNav);
