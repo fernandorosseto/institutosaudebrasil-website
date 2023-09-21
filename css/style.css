@@ -24,6 +24,7 @@
     list-style: none;
     text-decoration: none;
     color: inherit;
+    
 }
 
 button {
@@ -56,6 +57,7 @@ header{
     align-items: center;
     top: 0px;
     background-color: var(--cor-bacground-dois);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .logo{
@@ -82,6 +84,7 @@ header{
     width: 75vw;
     transform: translateY(-12rem);
     font-size: 5rem;
+    
 }
 
 /* Estilos para telas maiores */
@@ -195,6 +198,10 @@ header{
         backdrop-filter: blur(10px);
         opacity: .3;
         
+    }
+
+    #btnDoe{
+
     }
     
 
