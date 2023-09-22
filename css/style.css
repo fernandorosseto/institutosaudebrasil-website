@@ -73,18 +73,34 @@ header{
     
 }
 
+.imagemInicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .imagemInicio>img{
-    width: 75vw;
-    align-self: center;
-    
+    width: 100%;
+    clip-path: polygon(0% 20%, 100% 20%, 100% 90%, 0% 90%);
+    object-fit: cover; 
+    top: 0;
+
 }
 
-.textoInicio>h1{
-    color: var(--cor-texto);
-    width: 75vw;
-    transform: translateY(-12rem);
-    font-size: 5rem;
-    
+.textoInicio{
+        display: flex;
+        width: 80%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        justify-items: end;
+        padding: 20px;
+        font-size: 3.4rem;
+        text-align: end;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bolder;
+        color: var(--cor-background-um);
+        text-shadow: 1px 1px 2px black;
+
 }
 
 /* Estilos para telas maiores */
@@ -92,13 +108,13 @@ header{
 @media (max-width: 601px) {
 
     header {
-        height: 10vh;
+        height: 12vh;
         z-index: 1;
         
     }
     
     .logo {
-        max-height: 10vh; 
+        max-height: 13vh; 
     }
 
     #hamburger{
@@ -150,55 +166,34 @@ header{
         
     }
 
+    .imagemInicio{
+        position: relative;
+        width: 100vw;        
+
+    }
+
     .imagemInicio>img{
         width: 100vw;
+        clip-path: polygon(0% 0%, 100% 00%, 100% 95%, 0% 95%);
+
     }
 
-    /*.textoInicio:before {
-        display: block;
-        content: "";
+    /*.textoInicio{
+        display: flex;
+        width: 80%;
         position: absolute;
-        height: 20px;
-        background-color: var(--cor-secundaria);
-        right:20px;
-        width: 42%;
-        transform: translateY(-80px);
-    }*/
-
-    .textoInicio{
-        display: block;
-        position: absolute;
-        bottom: 170px;
-
-        
-    }
-
-    .textoInicio>h1{
+        bottom: 0;
+        right: 0;
+        justify-items: end;
+        padding: 20px;
+        font-size: 3.4rem;
+        text-align: end;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bolder;
         color: var(--cor-background-um);
-        font-size: 2.85rem;
-        width: 100vw;
-        text-align: right;
-        padding-right: 20px;
-        z-index: 0;
+        text-shadow: 1px 1px 2px black;
 
-        
-    }
-
-    .textoInicio>h1::before{
-        content: "";
-        position: absolute;
-        display: block;
-        background-color: var(--cor-secundaria);
-        height: 5.9rem;
-        z-index: 10;
-        bottom: 6px;
-        width: 62%;
-        right: 15px;
-        z-index: -1;
-        backdrop-filter: blur(10px);
-        opacity: .3;
-        
-    }
+    }*/
 
     #btnDoe{
 
