@@ -44,15 +44,23 @@ button {
 
 html{
     scroll-behavior: smooth;
+    
+}
+
+body{
+    height: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
  
 header{
     display: flex;
-    position: sticky;
-    height: 16vh;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    min-height: 16vh;
     justify-content: space-between;
     align-items: center;
-    top: 0px;
     background-color: var(--cor-bacground-dois);
     font-family: 'Source Sans Pro', sans-serif;
     /* From https://css.glass */
@@ -82,8 +90,11 @@ header{
     
 }
 
-section{
+.pagina{
+    padding-top: 16vh;
+    height: 84vh;
     min-height: 100vh;
+
 }
 
 .imagemInicio{
@@ -161,6 +172,7 @@ section{
     padding: 20px;
     
 }
+
 #btnDoe{
     background-color: var(--cor-secundaria);
     width: 10rem;
@@ -197,7 +209,6 @@ section{
     font-family: var(--texto-outros);
     font-size: 1.1rem;
     padding: 1rem;
-    text-;
 }
 
 .contatos{
@@ -221,18 +232,12 @@ section{
 
 @media (max-width: 601px) {
 
+    body{
+        max-width: 100vw;
+    }
+
     header {
-        position: fixed;
-        width: 100vw;
-        height: 12vh;
-        z-index: 100;
-        /* From https://css.glass*/
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(9px);
-        -webkit-backdrop-filter: blur(9px);
-        border: 1px solid rgba(255, 255, 255, 1);
-        
-        
+        min-height: 12vh;        
     }
     
     .logo {
@@ -388,6 +393,10 @@ section{
         -webkit-transform: translate(0);
                 transform: translate(0);
         }
+    }
+
+    main{
+        margin-top: 10vh;
     }
 
     #sobreNos{
