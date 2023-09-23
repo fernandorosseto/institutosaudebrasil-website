@@ -8,8 +8,8 @@
     --cor-background-um: #FFFFFF; 
     --cor-bacground-dois: rgb(238, 238, 238); 
     --cor-texto: #000000;
-    --texto-titulo: font-family: 'Noto Sans', sans-serif;
-    --texto-outros: font-family: 'Source Sans Pro', sans-serif;
+    --texto-titulo: 'Noto Sans', sans-serif;
+    --texto-outros: 'Source Sans Pro', sans-serif;
 }
 
 /* Reset CSS */
@@ -24,6 +24,16 @@
     line-height: 1.5;
     
 
+}
+
+/* Padronizandos fonts */
+
+h1, h2, h3, h4, h5{
+    font-family: var(--texto-titulo)
+}
+
+p{
+    font-family: var(--texto-outros)
 }
 
 button {
@@ -67,10 +77,19 @@ header{
     z-index: 1;
 }
 
+/* Em imagens, colocamos o tamanho fixo no elemento que envolve a imagem */
+
 .logo{
-    max-height: 18vh;
-    width: auto;
-        
+    width:250px;
+    height:75px;
+}
+
+/* A imagem fica com tamanho 100% e object-fit:cover para se adequar sempre ao tamanho do box que a envolve */
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #nav{
@@ -321,10 +340,11 @@ header{
         overflow-y: hidden;
          
     }
-
+    
+    /* altura menu alterada */
     #nav.active #menu{
         display: block;
-        height: 90vh;
+        height: 215px; 
         visibility: visible;
         
     }
