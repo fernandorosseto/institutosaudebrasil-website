@@ -1,11 +1,6 @@
-/*  
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;700&family=Source+Sans+Pro:wght@200;300;400&display=swap');
 
-/* Cores do projeto */
+/* Cores e fontes do projeto */
 
 :root {
     --cor-secundaria: #7cba3b;
@@ -44,6 +39,7 @@ button {
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 75px;
     
 }
 
@@ -55,10 +51,10 @@ body{
  
 header{
     display: flex;
-    position: fixed;
+    position: sticky;
     width: 100vw;
     top: 0;
-    min-height: 16vh;
+    height: 75px;
     justify-content: space-between;
     align-items: center;
     background-color: var(--cor-bacground-dois);
@@ -91,7 +87,6 @@ header{
 }
 
 .pagina{
-    padding-top: 12vh;
     height: 100vh;
     max-width: 100vw;
 
@@ -124,7 +119,7 @@ header{
     color: var(--cor-background-um);
     text-shadow: 1px 1px 2px black;
     -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-	animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+	animation: slide-in-right 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
     overflow-x: hidden;
 
 }
@@ -211,9 +206,43 @@ header{
     font-family: var(--texto-outros);
     font-size: 1.1rem;
     padding: 1rem;
+    opacity: .7;
+}
+
+.historia>h2{
+    text-align: center;
+    padding-bottom: 5px;
+
+}
+
+.historia>h2::after{
+    content: "";
+    display: block;
+    position: relative;
+    height: 2px;
+    background-color: var(--cor-background-um);
+    width: 100%;
+    
 }
 
 .contatos{
+    height: auto;
+    padding: 1rem;
+}
+
+.contatos>h2{
+    text-align: center;
+}
+.contatos>h2::after{
+    content: "";
+    display: block;
+    position: relative;
+    height: 2px;
+    background-color: var(--cor-principal);
+    width: 100%;
+}
+
+.grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -230,16 +259,28 @@ header{
     align-items: center;
 }
 
+.grid a img{
+    display: block;
+    width: 3.3rem;
+    height: auto;
+    clip-path: circle(50%);
+}
+
 /* Estilos para telas menores */
 
-@media (max-width: 601px) {
+@media screen and (max-width: 601px) {
+
+    html{
+        scroll-padding-top: 100px;
+        
+    }
 
     body{
         max-width: 100vw;
     }
 
     header {
-        min-height: 12vh;        
+        height: 100px;        
     }
     
     .logo {
@@ -270,7 +311,7 @@ header{
         display: block;
         position: absolute;
         width: 100%;
-        top: 10vh;
+        top: 100px;
         right: 0px;
         background-color: var(--cor-bacground-dois);
         height: 0;
@@ -397,10 +438,6 @@ header{
         }
     }
 
-    main{
-        margin-top: 10vh;
-    }
-
     #sobreNos{
         display: block;
         width: 100vw;        
@@ -410,8 +447,9 @@ header{
         width: auto;
     }
 
+
+
     .contatos{
-        display: flex;
-        flex-direction: column;
+        
     }
 }
