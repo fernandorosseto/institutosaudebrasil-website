@@ -241,8 +241,13 @@ header{
     
 }
 
-.contatos{
-
+#comoAjudar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding: 1rem;
+    
 }
 
 
@@ -260,7 +265,9 @@ header{
     }
 
     header {
-        height: 100px;        
+        height: 100px;
+        position: sticky;
+        top: 0;     
     }
     
     .logo {
