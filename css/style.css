@@ -266,8 +266,7 @@ header{
 
     header {
         height: 100px;
-        position: sticky;
-        top: 0;     
+   
     }
     
     .logo {
