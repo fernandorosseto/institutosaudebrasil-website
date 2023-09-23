@@ -218,18 +218,15 @@ header{
 }
 
 .historia{
-    width: 50vw;
+    width: 100vw;
     height: auto;
-    background: var(--cor-principal);
-    color: var(--cor-background-um);
+    color: var(--cor-texto);
     font-family: var(--texto-outros);
     font-size: 1.1rem;
     padding: 1rem;
-    opacity: .7;
 }
 
 .historia>h2{
-    text-align: center;
     padding-bottom: 5px;
 
 }
@@ -239,51 +236,15 @@ header{
     display: block;
     position: relative;
     height: 2px;
-    background-color: var(--cor-background-um);
+    background-color: var(--cor-secundaria);
     width: 100%;
     
 }
 
 .contatos{
-    height: auto;
-    padding: 1rem;
+
 }
 
-.contatos>h2{
-    text-align: center;
-}
-.contatos>h2::after{
-    content: "";
-    display: block;
-    position: relative;
-    height: 2px;
-    background-color: var(--cor-principal);
-    width: 100%;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    width: auto;
-    height: auto;
-    background: var(--cor-background-um);
-    color: var(--cor-principal);
-    font-family: var(--texto-outros);
-    font-size: 1.3rem;
-    padding: 1rem;
-    justify-items: center;
-    align-items: center;
-}
-
-.grid a img{
-    display: block;
-    width: 3.3rem;
-    height: auto;
-    clip-path: circle(50%);
-}
 
 /* Estilos para telas menores */
 
@@ -330,7 +291,7 @@ header{
         display: block;
         position: absolute;
         width: 100%;
-        top: 100px;
+        top: 98px;
         right: 0px;
         background-color: var(--cor-bacground-dois);
         height: 0;
@@ -344,7 +305,7 @@ header{
     /* altura menu alterada */
     #nav.active #menu{
         display: block;
-        height: 215px; 
+        height: 100vh; 
         visibility: visible;
         
     }
