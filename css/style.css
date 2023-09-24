@@ -291,16 +291,40 @@ footer{
     filter:grayscale(40%);
     justify-content: center;
     padding-top: 1rem;
+    position: relative;
 }
 
 .contatos span{
     width: 1.8rem;
     height: auto;
+    box-shadow: var(--cor-principal);
 
 }
 
 .contatos img{
     width: 100%;
+}
+
+.hoverIcones:hover{
+    transform: scale(1.3) translateY(-5px);
+    transition: linear .2s;
+    
+
+}
+
+#telFixo:hover::after{
+    content: "(034) 9 9900-8263";
+    display: block;
+    position: absolute;
+    height: auto;
+    width: 120px;
+    top:-30%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color:var(--cor-bacground-dois);
+    font-size: .8rem;
+    text-align: center;
+    border-radius: 2rem;
 }
 
 .info{
@@ -309,6 +333,11 @@ footer{
     font-weight: lighter;
     font-size: .8rem;
 
+}
+
+#meuLinkdIn{
+    font-weight: bolder;
+    padding: 10px 0;
 }
 
 /* Estilos para telas menores */
@@ -517,6 +546,11 @@ footer{
 
     .chavePix{
         align-items: center;
+    }
+
+    #telFixo:hover::after{
+        content: "";
+
     }
 
 
